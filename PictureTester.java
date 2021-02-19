@@ -16,6 +16,22 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.zeroBlue();
+    beach.explore();
+  }
+
+  public static void testNegate()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -24,8 +40,39 @@ public class PictureTester
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
+
+
   }
-  
+
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+
+
+  }
+
+
+  public static void testMirrorHorizontalTopToBottom()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalTopToBottom();
+    caterpillar.explore();
+
+
+  }
+
+  public static void testMirrorHorizontalBottomToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBottomToTop();
+    caterpillar.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -33,6 +80,14 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+
+  public static void testMirrorArms()
+  {
+    Picture arms = new Picture("snowman.jpg");
+    arms.explore();
+    arms.mirrorArms();
+    arms.explore();
   }
   
   /** Method to test edgeDetection */
@@ -50,16 +105,20 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+//    testZeroBlue();
+//    testKeepOnlyBlue();
+    testNegate();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
+//    testMirrorVertical();
+//    testMirrorVerticalRightToLeft();
+//    testMirrorHorizontalTopToBottom();
+//    testMirrorHorizontalBottomToTop();
+//    testMirrorTemple();
+//    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
