@@ -296,5 +296,26 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+  /*
+  // copies the region defined by rows 10-100 and columns 20-200 of picture1 into picture2
+  // such that the upper-left corner of the copied picture starts at row 30 and column 40
+  //(and, therefore, extends to row 120 and column 220).
+    picture2.cropAndCopy( picture1, 10, 100, 20, 200, 30, 40 );
+   */
+  public void cropAndCopy( Picture sourcePicture, int startSourceRow, int endSourceRow, int startSourceCol, int endSourceCol,
+                    int startDestRow, int startDestCol ){
+    Pixel[][] destination = this.getPixels2D();
+    Pixel[][] source = sourcePicture.getPixels2D();
+    int coldif = startDestCol - startSourceCol;
+    int rowdif = startDestRow - startDestRow;
+    for(int col = startSourceCol; col <= endSourceCol; col ++) {// copying like reading a book, left to right then down
+      for (int row = startSourceRow; row <= endSourceRow; row++) {
+          Color sourceColor = source[row][col].getColor();
+          destination[row+rowdif][col+coldif].setColor(sourceColor);
+
+      }
+    }
+
+  }
+
 } // this } is the end of class Picture, put all new methods before this
