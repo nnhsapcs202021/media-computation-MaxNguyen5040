@@ -1,3 +1,5 @@
+import java.awt.*;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -131,5 +133,68 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+//    public void shepardFairey(Pixel[][] image, Color color1, Color color2, Color color3, Color color4){
+//    //smallest and biggest values
+//    int smallest;
+//    int biggest;
+//    int width = image.length;
+//    int height = image[0].length;
+//    Pixel pixel = image[0][0];
+//    smallest = pixel.getBlue();
+//    biggest = pixel.getBlue();
+//
+//    for (int y = 0; y < height; y++) {
+//      for (int x = 0; x < width; x++) {
+//        Pixel pixel1 = image[x][y];
+//        if(pixel1.getBlue() > biggest){
+//          biggest = pixel1.getBlue();
+//
+//        }
+//        else if(pixel1.getBlue() < smallest){
+//          smallest = pixel1.getBlue();
+//
+//        }
+//      }
+//    }
+//
+//    //divide into 4 ranges
+//    int range = biggest-smallest;
+//    range /= 4; //how long each range is
+//    int range1 = range;
+//    int range2 = range*2;//ending value
+//    int range3 = range*3;
+//
+//
+//    //interate through the pixels, changing colors
+//
+//    for (int y = 0; y < height; y++) {
+//      for (int x = 0; x < width; x++) {
+//        Pixel pixel2 = image[x][y];
+//        if(pixel.getBlue() <= range1){
+//          pixel.setBlue(color1.getBlue());
+//          pixel.setRed(color1.getRed());
+//          pixel.setGreen(color1.getGreen());
+//        }
+//        else if(pixel.getBlue() <= range2){
+//          pixel.setBlue(color2.getBlue());
+//          pixel.setRed(color2.getRed());
+//          pixel.setGreen(color2.getGreen());
+//        }
+//        else if(pixel.getBlue() <= range3){
+//          pixel.setBlue(color3.getBlue());
+//          pixel.setRed(color3.getRed());
+//          pixel.setGreen(color3.getGreen());
+//        }
+//        else{
+//          pixel.setBlue(color4.getBlue());
+//          pixel.setRed(color4.getRed());
+//          pixel.setGreen(color4.getGreen());
+//        }
+//      }
+//
+//
+//    }
+//
+//  }
   }
 }
